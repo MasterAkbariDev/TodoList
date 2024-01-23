@@ -1,0 +1,21 @@
+.btn {
+  outline: none;
+  border: none;
+  background-color: #e67e22;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.btn-in-input{
+  border-radius: 0 5px 5px 0;
+}
+
+.succeed {
+  background-color: #27ae60;
+}
+
+.danger {
+  background-color: #e74c3c;
+}

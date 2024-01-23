@@ -1,0 +1,61 @@
+body {
+  font-family: "ROBOTO";
+  text-align: center;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+.App > h1{
+  margin-top: 20px;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 50%;
+}
+
+.InputForm{
+  display: flex;
+  justify-content: center;
+}
+
+.form > input{
+  width: 50%;
+}
+
+@media (max-width:1024px){
+  .form{
+    width: 90%;
+  }
+  .form > input{
+    width: 100%;
+  }
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: start;
+  height: 470px;
+  margin: 20px 0;
+  padding: 10px 0;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  width: 95%;
+  padding: 10px 0;
+  overflow-y: auto;
+}
+
+.filterDateContainer{
+  margin-top: 20px;
+}

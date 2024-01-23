@@ -1,0 +1,38 @@
+.input {
+  outline: none;
+  padding: 3px 5px;
+  font-size: medium;
+  font-family: "ROBOTO";
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-right: none !important;
+  transition: 0.3s;
+  width: 50%;
+}
+
+.input-with-btn {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.input:focus {
+  border: 1px solid #000;
+}
+
+.date-Input {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  border-right: 1px solid #fff !important;
+  border-radius: 7px;
+  background-color: transparent;
+  font-family: "ROBOTO";
+  font-weight: 900;
+  font-size: 22px;
+  padding: 10px 20px;
+  width: 90px;
+  text-align: center;
+}
+
+.date-Input:focus{
+  border: 1px solid #fff;
+}
