@@ -24,15 +24,44 @@ function App() {
   useEffect(() => {
     dispatch(loadTodos())
     setFilteredData(data)
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    let keyDownHandled = false;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Enter' && !keyDownHandled) {
+        if (inputData.length > 0) {
+          dispatch(addTodo({ id: Math.floor(Math.random() * 100000), name: inputData, completed: false, date: `${yearInput}/${monthInput}/${dayInput}` }))
+          setInputData('')
+          keyDownHandled = true;
+        } else {
+          toast(
+            'Please enter a title!', {
+            autoClose: 1000,
+            theme: 'light',
+            hideProgressBar: true,
+            position: 'bottom-left',
+          }
+          )
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      keyDownHandled = false;
+    }
+  } , [inputData])
 
   useEffect(() => {
     setFilteredData(data)
   }, [data])
 
   useEffect(() => {
-    document.querySelector('.content').scrollTo(0 , document.querySelector('.content').scrollHeight)
-  } , [filteredData])
+    document.querySelector('.content').scrollTo(0, document.querySelector('.content').scrollHeight)
+  }, [filteredData])
 
   useEffect(() => {
     if (isFiltered) {

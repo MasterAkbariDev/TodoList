@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Button from '../Button/Button'
 import './TodoCard.css'
 import { changeTodo, deleteTodo } from '../../store/reducers/todolist'
@@ -19,8 +19,9 @@ const TodoCard = (props) => {
         <h4>{props.name}</h4>
       </div>
       <div className='right-side'>
+        <div className='Devider'></div>
         <p className='date-todo'>{TodoDate === Today ? "Today" : TodoDate === Tommorow ? "Tommorow" : TodoDate === YesterDay ? "Yesterday" : TodoDate}</p>
-        <div className='buttons'>
+        <div className="Todo-Buttons">
           <Button click={() => dispatch(changeTodo(props.id))} className='succeed'><CheckCircle size={20} /></Button>
           <Button click={() => dispatch(deleteTodo(props.id))} className='danger'><Trash /></Button>
         </div>

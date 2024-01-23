@@ -26,12 +26,12 @@
     height: 4%;
     background-color: currentColor;
     transition: width 0.25s ease;
-}T
-.buttons{
+}
+.Todo-Buttons{
     display: flex;
     height: 100%;
 }
-.buttons > button{
+.Todo-Buttons > button{
     display: block;
     height: 100%;
     border-radius: 0;
@@ -51,10 +51,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
 }
 
 .date-todo{
+    margin: 0 10px;
     flex: 1;
     justify-self: center;
+}
+
+.Devider::before{
+    content: "";
+    display: block;
+    width: 2px;
+    height: 25px;
+    background-color: #000;
+    margin-left: 10px;
 }
